@@ -3,7 +3,6 @@ from datacenter.models import Mark
 
 schoolkid = Schoolkid.objects.filter(full_name__contains="Фролов Иван")[0]
 
-
 def fix_marks(schoolkid):
     bad_marks = Mark.objects.filter(schoolkid=schoolkid, points__in=[2, 3])
 
